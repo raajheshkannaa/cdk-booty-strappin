@@ -5,7 +5,8 @@ Bootstrap all AWS Accounts and their regions under the AWS Organization and also
 
 This will be a one time setup to be done which will immensly help in laying the foundation for Cross Account CDK Pipelines:heart:
 
-### **Disclaimer**: _This automation process is one of the many many ways to accomplish the end result of bootstrapping all Accounts in an AWS Organization_
+### **Disclaimer**
+_This automation process is one of the many many ways to accomplish the end result of bootstrapping all Accounts in an AWS Organization_
 
 ## Prerequisites
 1. `cdk` should be preinstalled. If not run `npm install -g aws-cdk` in your terminal.
