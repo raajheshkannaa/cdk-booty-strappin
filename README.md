@@ -19,7 +19,7 @@ This will be a one time setup to be done which will immensly help in laying the 
 Bootstrapping is basically a cloudformation template `CDKToolkit` which creates necessary resources such as s3 buckets, ecr registries, IAM roles, etc.. in place for further deployments using CDK.
 
 ## Usage
-* Git clone repository `git clone https://github.com/raajheshkannaa/cdkbootystrappin`
+* Git clone repository `git clone https://github.com/raajheshkannaa/cdk-booty-strappin`
 * If using an IAM User/role set AWS Organiztion profile in `~/.aws/credentials` file.
 * If using SSO such as Okta for the AWS Orgnization account, use a program such as [`gimmeawscreds`](https://github.com/Nike-Inc/gimme-aws-creds) or [`saml2aws`](https://github.com/Versent/saml2aws) to obtain credentials and either set those as env variables or as a profile and export as `AWS_PROFILE=aws-org-profile`.
 * Confirm credentials with `aws sts get-caller-identity`.
