@@ -24,6 +24,7 @@ Bootstrapping is basically a cloudformation template `CDKToolkit` which creates 
 * If using SSO such as Okta for the AWS Orgnization account, use a program such as [`gimmeawscreds`](https://github.com/Nike-Inc/gimme-aws-creds) or [`saml2aws`](https://github.com/Versent/saml2aws) to obtain credentials and either set those as env variables or as a profile and export as `AWS_PROFILE=aws-org-profile`.
 * Confirm credentials with `aws sts get-caller-identity`.
 * Open the python file and add your `TRUSTED_ACCOUNT` variable to match your CI/CD pipeline AWS Account, so that it is trusted as a source for further CDK Deployments.
+* Run `python3 cdk_bootstrap_multiple_accounts.py`
 
 ## Notes
 * The reason this needs to be run from the AWS Organization Account, is because it has existing trust relationships with all the member aws accounts with the `OrganizationAccountAccessRole`.
