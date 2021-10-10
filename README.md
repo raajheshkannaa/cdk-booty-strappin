@@ -30,6 +30,7 @@ Bootstrapping is basically a cloudformation template `CDKToolkit` which creates 
 * Run `python3 cdk_bootstrap_multiple_accounts.py`
 
 ## Notes
+* This python code will only bootstrap member AWS Accounts for an AWS Organization, does not bootstrap the Organization Master itself. Considering you have existing access, please bootstrap the Billing account using `cdk bootstrap --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess`
 * The reason this needs to be run from the AWS Organization Account, is because it has existing trust relationships with all the member aws accounts with the `OrganizationAccountAccessRole`.
 * This could also be run from the SecurityAudit account in the case when you have Control Tower setup and all AWS Accounts enrolled with the trust relationship setup for the `ControlTowerExecution` role.
 * The reason why we use `subprocess` instead of `os` from python is because when a subsequent or multiple commands are run with os.system back to back, they are run in separate child shell processes, making it hard to export/set environment variables, that the code could then make use to assume IAM roles with.
