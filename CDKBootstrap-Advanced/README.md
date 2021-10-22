@@ -1,4 +1,4 @@
-# CDK Bootstrap a new account once created using AWS Organizations
+# CDK Bootstrap a new account once created using EventBridge with AWS Organizations
 A CDK App to automate the CDK bootstrap process in a new account once created, what an irony :stuck_out_tongue:
 
 ![Automated CDK BootStrapping](./AutomatedBootStrapping.png)
